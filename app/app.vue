@@ -5,6 +5,7 @@ import GameGrid from "./components/game/grid.vue";
 import { useGameStore } from "./stores/game-store";
 import { useAuthStore } from "./stores/auth-store";
 import { Analytics } from "@vercel/analytics/nuxt";
+import { SpeedInsights } from "@vercel/speed-insights/vue";
 
 const gameStore = useGameStore();
 const authStore = useAuthStore();
@@ -43,6 +44,7 @@ onMounted(async () => {
 
 <template>
   <Analytics />
+  <SpeedInsights />
     <button class="restart-button" data-testid="restart-button" @click="gameStore.restart">
       Рестарт
     </button>
