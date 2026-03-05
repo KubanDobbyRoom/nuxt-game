@@ -4,6 +4,7 @@ import type { Action } from "../shared/types/game";
 import GameGrid from "./components/game/grid.vue";
 import { useGameStore } from "./stores/game-store";
 import { useAuthStore } from "./stores/auth-store";
+import { Analytics } from "@vercel/analytics/nuxt";
 
 const gameStore = useGameStore();
 const authStore = useAuthStore();
@@ -41,6 +42,7 @@ onMounted(async () => {
 </script>
 
 <template>
+  <Analytics />
     <button class="restart-button" data-testid="restart-button" @click="gameStore.restart">
       Рестарт
     </button>
