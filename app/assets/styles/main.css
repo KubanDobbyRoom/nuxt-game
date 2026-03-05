@@ -1,0 +1,13 @@
+html {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #656060;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
